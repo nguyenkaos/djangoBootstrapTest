@@ -1,0 +1,405 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+	<title>NGUYEN</title>
+	{% load static %} 
+	<link rel="stylesheet"  href="{% static 'web/css/bootstrap.min.css' %}" />
+	<link rel="stylesheet"   href="{% static 'web/css/style.css' %}" />
+	<script src="{% static 'web/js/jquery-3.1.1.js' %}" ></script>
+	<script src="{% static 'web/js/jquery-3.1.1.min.js' %}" ></script> 
+    <script src="{% static 'web/js/bootstrap.min.js' %}" ></script> 
+</head>
+
+<body class="index-page">
+ <nav class="navbar navbar-default navbar-fixed-top">
+        <div class="container">
+            <!-- Brand and toggle get grouped for better mobile display -->
+            <div class="navbar-header page-scroll">
+                <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
+                    <span class="sr-only">Toggle navigation</span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                </button>
+				<a class="navbar-brand page-scroll" href="#page-top">NGUYEN CAO</a>
+            </div> 
+            <!-- Collect the nav links, forms, and other content for toggling -->
+            <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+                <ul class="nav nav-justified ">
+                    <li class="hidden">
+                        <a href="#page-top"></a>
+                    </li>
+                    <li class="active">
+                        <a class="page-scroll" href="#">Home</a>
+                    </li>
+                    <li>
+                        <a class="page-scroll" href="#exo">Hoolder Interview</a>
+                    </li>
+                    <!--<li>
+                        <a class="page-scroll" href="single.html">About</a>
+                    </li>-->
+                    <li>
+                        <a class="page-scroll" href="#contact">Contact</a>
+                    </li>
+                </ul>
+            </div>
+            <!-- /.navbar-collapse -->
+        </div>
+        <!-- /.container-fluid -->
+    </nav>
+	<!-- ________//1_END// : Navigateur __________________-->
+	
+	
+	<header>
+		<!-- _____//Box 01// Carousel! __________-->
+    	<div id="carousel-example-generic" class="carousel slide" data-ride="carousel">
+			<!-- Indicators -->
+			<ol class="carousel-indicators">
+			  	<li data-target="#carousel-example-generic" data-slide-to="0" class="active"></li>
+			    <li data-target="#carousel-example-generic" data-slide-to="1"></li> 
+			    <li data-target="#carousel-example-generic" data-slide-to="2"></li> 
+			</ol>
+			<!-- Wrapper for slides -->
+			<div class="carousel-inner">
+			    <div class="item active">
+			    	<img src= "{% static 'web/images/ima1.png' %}" >
+					<div class="header-text hidden-xs"> 
+                             <div class="logo">
+								<a href="#">
+									<div class="name f-right"><span class="name f-right">NGUYEN</span><span class="name f-right">Cao-Cuong  </span></div>
+								</a>
+							</div> 
+                    </div>
+                </div>
+			    <div class="item">
+			    	<img src="{% static 'web/images/ima2.png' %}" alt="Second slide">
+			    	<!-- Static Header -->
+                    <div class="header-text hidden-xs">
+                        <div class="col-md-12 text-center">
+                             <div class="logo">
+								<a href="#">
+									<div class="name f-right"><span class="name f-right">NGUYEN</span><span class="name f-right">Cao-Cuong  </span></div>
+								</a>
+							</div>
+                        </div>
+                    </div><!-- /header-text -->
+			    </div>
+				<div class="item">
+			    	<img src="{% static 'web/images/ima3.png' %}" alt="Second slide">
+			    	<!-- Static Header -->
+                    <div class="header-text hidden-xs">
+                        <div class="col-md-12 text-center">
+                             <div class="logo">
+								<a href="#">
+									<div class="name f-right"><span class="name f-right">NGUYEN</span><span class="name f-right">Cao-Cuong  </span></div>
+								</a>
+							</div>
+                        </div>
+                    </div><!-- /header-text -->
+			    </div>				
+			</div>
+			<!-- Controls -->
+			<a class="left carousel-control" href="#carousel-example-generic" data-slide="prev">
+		    	<span class="glyphicon glyphicon-chevron-left"></span>
+			</a>
+			<a class="right carousel-control" href="#carousel-example-generic" data-slide="next">
+		    	<span class="glyphicon glyphicon-chevron-right"></span>
+			</a>
+		</div><!-- /carousel -->
+	</header>
+	
+ 
+	<div id="page-content">
+		<!-- _____//Box 02// Its me! __________-->
+		<section class="box-content box-1">
+			<div class="container">
+				<div class="row">
+					<div class="col-sm-6 ">
+						<div class="box-item">
+						</div>
+			 		</div>
+			 		<div class="col-sm-6 ">
+						<div class="box-item">
+							<a href="#"><img src="{% static 'web/images/myface.png' %}" title="icon-name" class="img-circle"></a>
+							<h3>NGUYEN Cao Cuong</h3>
+							<p>INGÉNIER BIO-INFORMATIQUE & ÉTUDIANT M2 DÉVELOPPEMENT LOGICIEL</p> 
+						</div>
+			 		</div>
+				</div>
+			</div>
+		</section>
+		<!-- _____//Box 03 // Login __________-->
+		<section class="box-content box-6" id="exo">
+				<div class="heading">	
+					<h2>Hoolder Interview</h2>
+					<hr class="line">
+					<div class="intro"></div>	                
+				</div>
+			<div class="form" id ="LoginDiv">
+				<ul class="tab-group">
+					<li class="tab active"><a href="#login">Log In</a></li>		  
+					<li class="tab "><a href="#signup">Sign Up</a></li>
+				</ul>
+				<div class="tab-content" >
+					<!-------  FOR LOGIN ---------->
+					<div id="login">   
+					  <h1 id="welcomeBack">Welcome Back!</h1>
+					  <h1 id="loginALERT" style="display: none;" >Login FAIL!</h1>
+					  <h1 id="signupOkALERT" style="display: none;" > Sign Up Accepted !</h1>
+					  <form  id="loginForm">
+					  {% csrf_token %} 
+						<div class="field-wrap">
+							<label>
+							  UserName<span class="req">*</span>
+							</label></br></br>
+							<input type="text"required autocomplete="off" placeholder="UserName" name="username" id="username"/>
+						</div>
+						<div class="field-wrap">
+							<label>
+							  Password<span class="req">*</span>
+							</label></br></br>
+							<input type="password"required autocomplete="off" placeholder="password" name="password" id="password"/>
+						</div>
+					  <button type="Submit"  id="logIn" class="button button-block"  onclick="location.href='#exo';"/>Log In</button>
+					  </form>
+					</div> 
+					<!------  FOR Sign Up --------> 
+					<div id="signup">   
+					  <h1 id="signupLabel">Sign Up</h1>
+					  <h1 id="signupALERT" style="display: none;" >SignUp FAIL !!!</br> Username already exists!</h1>
+						  <form action="/" method="post" id="sigupForm">
+						  {% csrf_token %} 
+						  <div class="field-wrap">
+							  <label>
+								UserName<span class="req">*</span>
+							  </label></br></br>
+							  <input type="text" required placeholder="UserName" id="usernameSU"/>
+						  </div>
+						  <div class="field-wrap">
+								<label>
+								Email Address<span class="req">*</span>
+								</label></br></br>
+								<input type="text" required name='erze' placeholder="Email Address" id='emailSU' value="" autocomplete="off"/>
+								<input type="text" required name='DeBug_Autocomplete' value="debug"  style="display: none;" />
+						  </div>
+						  <div class="field-wrap">
+								<label>
+								Set A Password<span class="req">*</span>
+								</label></br></br>
+								<input type="password"required  placeholder="password" id="passwordSU"/>
+						  </div>
+						  <button type="submit" class="button button-block"/>Get Started</button>
+						  </form>
+					</div>       
+					<!--  FOR Sign Up --> 
+				</div><!-- tab-content -->
+			</div><!-- form -->  
+			<!-------  FOR ACCOUNT INFORMATION & SAVE ---------->	
+			<div class="form" id ="InfoDiv" style="display: none;">
+				<div class="tab-content" >
+				<!--  FOR Sign Up --> 
+				  <h1>Account Information</h1>
+				  <h3 id="infoALERT" style="display: none;">Information Saved Successfully !</h3>
+						<form action="/" method="post" id="EnregistrerForm">
+						{% csrf_token %} 
+							<div class="field-wrap">
+								  <label>UserName
+								  </label></br></br>
+								  <input type="text" id="usernameInfo" placeholder="UserName" />
+							</div> 
+							<div class="field-wrap">
+									<label>
+									Email Address
+									</label></br></br>
+									<input type="text" id="emailInfo" placeholder="Email Address"  />
+							</div>  
+							<button type="Submit" class="button button-block"  onclick="location.href='#exo';"/>Save</button> 
+						</br><button type="button" class="button button-block" id='logout' />Log Out</button> 
+					    </form>  
+				</div>	 				
+			</div><!-- tab-content -->					
+		</section> <!-- Box_03_Login-->
+		
+ 
+		<!-- _____//Box 04// Petit Cool Quote ______-->
+		<section class="box-content box-4 box-style-2">
+			<div class="container">
+				<div class="row">
+					<div class="box-item">
+						<blockquote><p>"A man with a watch probably knows what time it is. A man with two watches is never quite sure, and a man with ten watches has a pretty good estimate."</p></blockquote>
+					</div>
+				</div>
+			</div>
+		</section>
+		
+		<!-- _____//Box 05// My Location______-->
+		<section class="box-content box-7" id="contact">
+			<div class="clearfix">
+				<div class="heading">	
+					<h2>My University</h2>
+					<hr class="line">
+					<div class="intro"></div>	                
+				</div>
+				<div class="box-item" >
+					<div class='embed-container maps'>
+					<iframe src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d10533.631472784997!2d2.1764839!3d48.6976847!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0xc05933cc10b2b7f0!2sUniversit%C3%A9+Paris-Sud!5e0!3m2!1sfr!2sfr!4v1481412099970" height="400px" width="100%" frameborder="0" style="border:0"></iframe>
+					
+					</div>
+				</div>
+			</div>
+		</section>
+		
+	</div> <!-- _______End_div__"page-content"_________-->
+
+	
+	<!-- _____//footer//____social buttons___-->
+	
+	<footer>
+		<div class="wrap-footer" id="footer">
+			<p><a class="btn btn-lg btn-primary" href="#">Back to top</a></p>
+		</div>
+	</footer>				
+<script src="http://code.jquery.com/jquery-2.1.4.min.js"></script>
+
+<script>
+// For Login : transition tab_Login et tab_SignUp
+$('.tab a').on('click', function (e) {
+  e.preventDefault();
+  $(this).parent().addClass('active');
+  $(this).parent().siblings().removeClass('active');
+  target = $(this).attr('href');
+  $('.tab-content > div').not(target).hide();
+  $(target).fadeIn(600);
+});
+
+
+//For Login-form CHECK
+$('#loginForm').on('submit', function(event){
+    event.preventDefault();
+    $.ajax({
+        url : '/loginCheck/',
+        type : 'POST',
+        data : {userName : $('#username').val(), PassW : $('#password').val() }, 
+        success : function(json){
+			if ( json.nbUserFound > 0 ) {
+				$("#loginALERT").hide();
+				$("#LoginDiv").hide();
+				$("#InfoDiv").show();
+				$('#usernameInfo').val(json.userName);
+				$('#emailInfo').val(json.emailUser); 
+			} else {
+				$("#loginALERT").show();
+				$("#welcomeBack").hide();
+				$("#signupOkALERT").hide(); 
+			}
+        }
+    });
+}); 
+
+////For LogOut
+$(document).ready(function(){
+    $("#logout").click(function(){
+		$("#infoALERT").hide();
+		$('#username').val('');
+		$('#password').val('');
+		$('#usernameInfo').val('');
+		$('#emailInfo').val('');
+		$("#InfoDiv").hide();
+		$("#LoginDiv").show();
+		$("#welcomeBack").show();
+		$("#signupOkALERT").hide(); 
+        window.location.href = "#exo";
+    });
+}); 
+
+
+//For Enregistrer-form
+$('#EnregistrerForm').on('submit', function(event){
+    event.preventDefault();
+    $.ajax({
+        url : '/save/',
+        type : 'POST',
+        data : {userName : $('#usernameInfo').val(),emailModified : $('#emailInfo').val() }, 
+        success : function(json){
+			$("#infoALERT").show();	
+        }
+    });
+});
+
+
+//For SignUp Form
+$('#sigupForm').on('submit', function(event){
+    event.preventDefault();
+    $.ajax({
+        url : '/SignUp/',
+        type : 'POST',
+        data : {userNameSU : $('#usernameSU').val(), PassWSU : $('#passwordSU').val(), emailSU : $('#emailSU').val() }, 
+        success : function(json){ 
+			if ( json.nbUserFound > 0 ) {
+				//// FAIL
+				$("#signupALERT").show();
+				$("#signupOkALERT").hide();  
+				$("#signupLabel").hide(); 
+			} else {
+				//// PASS			
+				$("#signupALERT").hide();
+				$("#loginALERT").hide();
+				$("#signup").hide();
+				$("#login").show();
+				$("#signupOkALERT").show(); 
+				$("#welcomeBack").hide();
+				$('#usernameSU').val('');		
+				$('#passwordSU').val('');		
+				$('#emailSU').val('');		
+			} 
+        }
+    });
+});
+
+
+
+//// Get data for jQuery
+function getCookie(name) {
+    var cookieValue = null;
+    if (document.cookie && document.cookie != '') {
+        var cookies = document.cookie.split(';');
+        for (var i = 0; i < cookies.length; i++) {
+            var cookie = jQuery.trim(cookies[i]);
+            // Does this cookie string begin with the name we want?
+            if (cookie.substring(0, name.length + 1) == (name + '=')) {
+                cookieValue = decodeURIComponent(cookie.substring(name.length + 1));
+                break;
+            }
+        }
+    }
+    return cookieValue;
+}
+var csrftoken = getCookie('csrftoken');
+function csrfSafeMethod(method) {
+    // these HTTP methods do not require CSRF protection
+    return (/^(GET|HEAD|OPTIONS|TRACE)$/.test(method));
+}
+$.ajaxSetup({
+    beforeSend: function(xhr, settings) {
+        if (!csrfSafeMethod(settings.type) && !this.crossDomain) {
+            xhr.setRequestHeader("X-CSRFToken", csrftoken);
+        }
+    }
+});
+
+//// For Google Map 
+$('.maps').click(function () {
+	$('.maps iframe').css("pointer-events", "auto");
+});
+$( ".maps" ).mouseleave(function() {
+  $('.maps iframe').css("pointer-events", "none"); 
+}); 
+
+
+</script>
+</body>
+</html>
