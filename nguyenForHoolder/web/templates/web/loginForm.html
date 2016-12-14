@@ -204,22 +204,22 @@
 				<!--  FOR Sign Up --> 
 				  <h1>Account Information</h1>
 				  <h3 id="infoALERT" style="display: none;">Information Saved Successfully !</h3>
-						<form action="/" method="post" id="EnregistrerForm">
+				  <h3 id="infoDisplay"> </h3>
+						<form action="/" method="post" id="EnregistrerForm" style="display: none;">
 						{% csrf_token %} 
-							<div class="field-wrap">
-								  <label>UserName
-								  </label></br></br>
-								  <input type="text" id="usernameInfo" placeholder="UserName" />
-							</div> 
+							<input type="text" id="usernameInfo" placeholder="UserName" style="display: none;"/>
+							
 							<div class="field-wrap">
 									<label>
 									Email Address
 									</label></br></br>
 									<input type="text" id="emailInfo" placeholder="Email Address"  />
 							</div>  
-							<button type="Submit" class="button button-block"  onclick="location.href='#exo';"/>Save</button> 
+							<button type="Submit" class="button button-block"  onclick="location.href='#exo';"/>Save</button>
+						</form>
+						</br><button type="button" class="button button-block" id='editInfoButton' />Edit Infomation</button> 
 						</br><button type="button" class="button button-block" id='logout' />Log Out</button> 
-					    </form>  
+					     
 				</div>	 				
 			</div><!-- tab-content -->					
 		</section> <!-- Box_03_Login-->
@@ -291,6 +291,8 @@ $('#loginForm').on('submit', function(event){
 				$("#InfoDiv").show();
 				$('#usernameInfo').val(json.userName);
 				$('#emailInfo').val(json.emailUser); 
+				$('#infoDisplay').html('Your UserName : '+json.userName+"<p> Your Email: "+json.emailUser); 
+				$('#editInfoButton').show('');
 			} else {
 				$("#loginALERT").show();
 				$("#welcomeBack").hide();
@@ -312,6 +314,20 @@ $(document).ready(function(){
 		$("#LoginDiv").show();
 		$("#welcomeBack").show();
 		$("#signupOkALERT").hide(); 
+		$('#infoDisplay').html('');
+		$('#EnregistrerForm').hide('');
+        window.location.href = "#exo";
+    });
+}); 
+
+
+////For Edit Infomation BUTTON:
+$(document).ready(function(){
+    $("#editInfoButton").click(function(){
+		$('#EnregistrerForm').show('');
+		$('#infoDisplay').html('Your UserName : '+ $('#usernameInfo').val() );
+		$('#editInfoButton').hide('');
+		$("#infoALERT").hide();
         window.location.href = "#exo";
     });
 }); 
@@ -325,7 +341,11 @@ $('#EnregistrerForm').on('submit', function(event){
         type : 'POST',
         data : {userName : $('#usernameInfo').val(),emailModified : $('#emailInfo').val() }, 
         success : function(json){
-			$("#infoALERT").show();	
+			//$('#infoDisplay').html('Your UserName : '+ $('#usernameInfo').val() );
+			$("#infoALERT").show();
+			$('#EnregistrerForm').hide('');
+			$('#infoDisplay').html('Your UserName : '+$('#usernameInfo').val()+"<p> Your Email: "+$('#emailInfo').val()); 
+			$('#editInfoButton').show('');			
         }
     });
 });
